@@ -38,7 +38,7 @@ class TrainDoor:
         if obstacle_detected:
             self.state = DoorState.OPEN  # reopen to protect the passenger
         else:
-            self.state = DoorState.CLOSED_LOCKED
+            self.state = DoorState.CLOSING #closed_locked
 
     def traction_allowed(self) -> bool:
         """The train may only drive when the doors are closed and locked."""
